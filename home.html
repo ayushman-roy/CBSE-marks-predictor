@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="logic.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"></link>
+    <title>Boards Marks Predictor</title>
+</head>
+<body>
+<h1><a>Class 12 Boards Marks Predictor</a></h1> <br>
+<section>
+    <h3><a>How It Works?</a></h3>
+    <p> <b>Enter your marks in the following form and click submit to get your predicted scores 
+        for <i>Class 12 Boards Examinations 2021. </i></b><br>
+        Make sure you enter valid marks only. <b>If some marks are unavailable, please enter your best possible guess.</b><br>
+        <b>Only enter the theory marks of your best three subjects in Class 10. In case the maximum marks 
+        for such were not 80, please convert it to be upon 80 before submitting. </b><br>
+        <b>Formula for conversion : <br>
+        <a>(MARKS OBTAINED  &frasl;  MAXIMUM MARKS) X 80</a></b><br>
+        <b>Marks Distribution</b> refers to the course marking structure. 
+        In case the maxmium practical marks in the subject was 30, please select the <b>70:30</b> option, 
+        and if the maximum practical marks in the subject was 20, please select the <b>80:20</b> option. <br>
+        <b>Only enter theory marks for all subjects in class 11 and 12 fields. 
+        Practical marks section refers to the marks obtained during the 2021 boards practical examinations.<br>
+        Only enter the marks of your final examinations in class 11 section. For class 12, enter the marks 
+        obtained in the preboards or mid-term examinations, whichever was higher. </b><br><br>
+    </p>
+</section>
+<section>
+    <form action="">
+        <div class="u-full-width">
+            <h5><legend><a>Class 10</a></legend></h5>
+            <label for="10subA">Best Subject :</label> 
+            <input type="number" name="10subA">
+            <label for="10subB">Second Best Subject :</label>
+            <input type="number" name="10subB">
+            <label for="10subC">Third Best Subject :</label> 
+            <input type="number" name="10subC">
+        </div>
+        <div class="u-full-width">
+            <h5><legend><a>Class 11</a></legend></h5>
+            <label for="11Language">Language :</label>
+            <input type="number" name="11Language"> 
+            <br> <div> <b> Marks Distribution : 
+            <input type="radio" name="LanguageDist" value="70"> 70:30
+            <input type="radio" name="LanguageDist" value="80" checked="checked"> 80:20 </b> </div> <br>
+            <label for="11subB">Subject 2 :</label> 
+            <input type="number" name="11subB"> 
+            <br> <div> <b> Marks Distribution :
+            <input type="radio" name="subBDist" value="70"> 70:30
+            <input type="radio" name="subBDist" value="80" checked="checked"> 80:20 </b> </div> <br>
+            <label for="11subC">Subject 3 :</label> 
+            <input type="number" name="11subC"> 
+            <br> <div> <b> Marks Distribution :
+            <input type="radio" name="subCDist" value="70"> 70:30
+            <input type="radio" name="subCDist" value="80" checked="checked"> 80:20 </b> </div> <br>
+            <label for="11subD">Subject 4 :</label> 
+            <input type="number" name="11subD"> 
+            <br> <div> <b> Marks Distribution :
+            <input type="radio" name="subDDist" value="70"> 70:30
+            <input type="radio" name="subDDist" value="80" checked="checked"> 80:20 </b> </div> <br>
+            <label for="11subE">Subject 5 :</label> 
+            <input type="number" name="11subE"> 
+            <br> <div> <b> Marks Distribution :
+            <input type="radio" name="subEDist" value="70"> 70:30
+            <input type="radio" name="subEDist" value="80" checked="checked"> 80:20 </b> </div> <br>
+            <label for="11subF">Subject 6 :</label> 
+            <input type="number" name="11subF"> 
+            <br> <div> <b> Marks Distribution :
+            <input type="radio" name="subFDist" value="70"> 70:30
+            <input type="radio" name="subFDist" value="80" checked="checked"> 80:20 </b> </div> <br>
+        </div>
+        <div class="u-full-width">
+            <h5><legend><a>Class 12</a></legend></h5>
+            <label for="12Language">Language :</label> 
+            <input type="number" name="12Language">
+            <label for="12subB">Subject 2 :</label> 
+            <input type="number" name="12subB">
+            <label for="12subC">Subject 3 :</label> 
+            <input type="number" name="12subC">
+            <label for="12subD">Subject 4 :</label> 
+            <input type="number" name="12subD">
+            <label for="12subE">Subject 5 :</label> 
+            <input type="number" name="12subE">
+            <label for="12subF">Subject 6 :</label> 
+            <input type="number" name="12subF">
+        </div>
+        <div class="u-full-width">
+            <h5><legend><a>Practical Marks</a></legend></h5>
+            <label for="PLanguage">Language :</label> 
+            <input type="number" name="PLanguage">
+            <label for="PsubB">Subject 2 :</label> 
+            <input type="number" name="PsubB">
+            <label for="PsubC">Subject 3 :</label> 
+            <input type="number" name="PsubC">
+            <label for="PsubD">Subject 4 :</label> 
+            <input type="number" name="PsubD">
+            <label for="PsubE">Subject 5 :</label> 
+            <input type="number" name="PsubE">
+            <label for="PsubF">Subject 6 :</label> 
+            <input type="number" name="PsubF">
+        </div>
+        <input class="button-primary" type="button" value="Submit Marks" onclick="dataOutput()">
+    </form>
+</section>    
+<section id="calculatedScores"></section>
+</body>
+<footer>
+    <h4>Developed by <a href="https://github.com/ayushman-roy">Ayushman Roy</a></h4>
+    <p> Please note that marks predicted are of an indicative nature only. <br> 
+        The developer does not take any liablity in case the actual marks differ from the predicted marks 
+        provided by this website. <br>
+        Infact there is ought to be some difference in the predicted and actual marks. 
+    </p>
+</footer>
+</html>
